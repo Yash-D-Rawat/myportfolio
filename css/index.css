@@ -5,9 +5,16 @@
     text-decoration: none;
 }
 
+:root{
+    /* --backgroundColor: rgb(227, 215, 238); */
+    --backgroundColor: #d8eff5;
+    --buttonColor: rgb(139, 52, 176);
+    --buttonHover: rgb(107, 43, 135);
+}
+
 body{
     padding: 15px;
-    background-color: rgb(227, 215, 238);
+    background-color: var(--backgroundColor);
 }
 
 header{
@@ -24,7 +31,7 @@ header{
 #logo{
     height: 5rem;
     width: 6rem;
-    background-color: rgb(227, 215, 238);
+    background-color: var(--backgroundColor);
     mix-blend-mode: multiply;
 }
 
@@ -54,7 +61,7 @@ header{
 #contactme{
     display: none;
     align-items: center;
-    background-color: rgb(139, 52, 176);
+    background-color: var(--buttonColor);
     color: white;
     font-weight: 700;
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -62,17 +69,11 @@ header{
 }
 
 #contactme:hover{
-    background-color: rgb(107, 43, 135);
+    background-color: var(--buttonHover);
 }
 
 #icon{
     display: none;
-}
-
-@media screen and (min-width: 880px){
-    #contactme{
-        display: flex;
-    }
 }
 
 @media screen and (max-width: 880px){
@@ -102,21 +103,21 @@ header{
     color: rgb(131, 30, 226);
 }
 
-@media screen and (max-width: 1250px) {
+/* @media screen and (max-width: 1250px) {
     .info-label{
         text-align: center;
     }
-}
+} */
 
 .info-title{
     font-size: 3rem;
 }
 
-@media screen and (max-width: 1250px) {
+/* @media screen and (max-width: 1250px) {
     .info-title{
         text-align: center;
     }
-}
+} */
 
 .info{
     height: 100%;
@@ -158,12 +159,16 @@ header{
 
 #start{
     align-items: center;
-    background-color: rgb(139, 52, 176);
+    background-color: var(--buttonColor);
     color: white;
     font-weight: 700;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 0.35rem;
     margin-right: 2.5rem;
+}
+
+#start:hover{
+    background-color: var(--buttonHover);
 }
 
 #tour{
@@ -179,6 +184,7 @@ header{
     height: 38rem;
     width: 30rem;
     border-radius: 1rem;
+    /* border: 5px solid rgb(199, 154, 247); */
     box-shadow: 0.5rem 0.5rem rgb(141, 131, 218);
     animation: imageleft 2.5s ease forwards;
     opacity: 0;
@@ -200,22 +206,25 @@ header{
     .main-content{
         flex-wrap: wrap;
     }
-}
-
-@media screen and (max-width: 1250px) {
+    .info-label{
+        text-align: center;
+    }
+    .info-title{
+        text-align: center;
+    }
     .info{
         justify-content: center;
     }
-}
-
-@media screen and (max-width: 1250px) {
     .info-para{
         text-align: center;
     }
-}
-
-@media screen and (max-width: 1250px) {
     .info-button{
         justify-content: center;
+    }
+}
+
+@media screen and (min-width: 880px){
+    #contactme{
+        display: flex;
     }
 }
